@@ -17,6 +17,6 @@ public class Queries {
             """;
     public static final String SQL_GET_PAYWAVE_SUM = """
                 SELECT SUM(item_price*item_quantity) as paywave_total FROM new_entry where user_id = ? AND DATE(entry_date)
-                BETWEEN ? AND ? AND item_owner = ? AND payment = 'dbs-paywave' ;
+                BETWEEN ? AND ? AND payment = 'dbs-paywave' ;
                     """;
 }

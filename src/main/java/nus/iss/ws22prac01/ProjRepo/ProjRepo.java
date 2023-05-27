@@ -40,8 +40,7 @@ public class ProjRepo {
         
         String paywave_total = "";
         Integer userId = this.getUserId(user_email);
-        String me = "Me";
-        SqlRowSet rs1 = template.queryForRowSet(SQL_GET_PAYWAVE_SUM, userId, start_date, end_date, me);
+        SqlRowSet rs1 = template.queryForRowSet(SQL_GET_PAYWAVE_SUM, userId, start_date, end_date);
         if (rs1.next()) {
             paywave_total = rs1.getString("paywave_total");
         }
